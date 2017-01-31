@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+  <style>
+    .listitem {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>About Me</h1>
+
+  <ul>
+    <li>Nickname: <span id="nickname"></span>
+    <li>Favorites:  <span id="favorites"></span>
+    <li>Hometown: <span id="hometown"></span>
+   </ul>
+  
+  <script type="text/javascript">
+   document.body.style.fontFamily = 'Arial, sans-serif';
+   document.getElementById('nickname').innerHTML = 'Kevin Mitnick';
+   document.getElementById('favorites').innerHTML = ' Computer Security Consultant';
+   document.getElementById('hometown').innerHTML = 'Los Angeles, California';
+   var items = document.getElementsByTagName('li');
+   for (var i = 0; i < items.length; i++) {
+      items[i].className = 'listitem';
+   }
+    
+    var laFotico = document.createElement('img');
+    laFotico.src = 'https://www.mitnicksecurity.com/images/uploads/Kevin-Mitnick-Presenting.jpg';
+    document.body.appendChild(laFotico);
+  </script>
+</body>
+</html>
